@@ -1,0 +1,31 @@
+html, body {
+	margin:0;
+	top:0;
+	left:0;
+}
+
+#topnav	{
+	width:100%;
+	background-color:white;
+	text-align: center;
+	position:fixed;
+	top: 0;
+}
+
+#topnav div {
+	display: inline-block;
+}
+
+#sidenav {
+	display: none;
+}
+
+.galllery {
+	width: 50%;
+	padding-top: 10%;
+	margin: auto;
+}
+
+.post img {
+	width: 100%;
+}
