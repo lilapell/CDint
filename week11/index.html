@@ -51,7 +51,7 @@
 		display:block;
 		font-size:2em;
 		line-height:0.5em;
-		animation: 2s sc pulse linear infinite;
+		animation: 2s pulse linear infinite;
 	}
 	.main {
 		width:100%;
@@ -99,22 +99,24 @@
 			transform:scale(1);
 		}
 	}
-	@keyframes sc pulse {
+	@keyframes pulse {
 		0% {
 			color: #FF8D63;
-			transform: scale(1);
 		}
-		25% {
+		20% {
+			color: red;
+		}
+		40% {
 			color:#FFC049;
-			transform: scale(1.2);
 		}
-		50% {
+		60% {
+			color: purple;
+		}
+		80% {
 			color: #BF265E;
-			transform: scale(1.5);
 		}
 		100% {
 			color: #FF8D63;
-			transform: scale(1);
 		}
 
 	}
