@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>scrollIntoView()</title>
+</head>
+<style type="text/css">
+	#main {
+		height:80vh;
+		overflow-x:scroll;
+		overflow-y:hidden;
+		white-space:nowrap;
+		float: right;
+		cursor: move
+		scroll-snap-type: x mandatory;
+	}
+	.featured {
+		width:100%;
+		height:auto;
+		overflow:hidden;
+		vertical-align:top;
+		margin:0;
+		scroll-snap-align: start;
+	}
+	.featured img {
+		object-fit: cover;
+		width:100%;
+	}
+	#selector {
+		margin:4% 0%;
+		text-align:right;
+	}
+	.option {
+		margin:0% 0.5%;
+		width:1em;
+		height:1em;
+		background-color:#cccccc;
+		border-radius:25%;
+		cursor:pointer;
+		transition:0.25s ease-in-out;
+	}
+	.option:hover {
+		background-color:#666666;
+
+	}
+</style>
+<body>
+
+<div id='main'>
+	<div class='featured' id='post1'>
+		<img src="option1.jpg">
+	</div>
+	<div class='featured' id='post2'>
+		<img src="option2.jpg">
+	</div>
+	<div class='featured' id='post3'>
+		<img src="option3.jpg">
+	</div>
+	<div class='featured' id='post4'>
+		<img src="option4.jpg">
+	</div>
+</div>
+
+<div id='selector'>
+	<div class='option' id='option1'></div>
+	<div class='option' id='option2'></div>
+	<div class='option' id='option3'></div>
+	<div class='option' id='option4'></div>
+</div>
+
+</body>
+<script type="text/javascript">
+
+let options = document.querySelectorAll('.option')
+	post1 = document.querySelector('#post1')
+	post2 = document.querySelector('#post2')
+	post3 = document.querySelector('#post3')
+	post4 = document.querySelector('#post4')
+
+options.forEach(item=>{
+		
+	item.onclick=function() {
+		id=item.id
+		console.log(id)
+		split = id.split('option')
+		console.log(split)
+		ref = split[1]
+		console.log(ref)
+		console.log('click')
+		element = document.querySelector('#post'+ref)
+		element.scrollIntoView({
+			behavior: "smooth"
+		})
+	}
+})
+
+</script>
+</html>
