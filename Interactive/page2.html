@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conversation about a Conversation</title>
+		<meta name="viewport" content="width=device-width">
+<style type="text/css">
+	html, body{
+		background-color: black;
+		top:0;
+		left:0;
+		margin:0;
+		height:100%;
+		display:flex;
+		align-items:center;
+		justify-content:center;
+	}
+	p {
+		font-family: Courier, monospace;
+	}
+	#alert {
+		opacity:0;
+		position:absolute;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		left:auto;
+		width:100%;
+		height:100vh;
+		bottom:-100vh;
+		transition:0.9s cubic-bezier(.44,.29,.94,.61);
+		cursor:pointer;
+	}
+	.aligner {
+		width:60%;
+		color:white;
+		text-align:center;
+		border-radius:1em;
+		background-color:white;
+		border:0.05em solid orange;
+		box-shadow:0em 0em 5em orange;
+		transition:0.5s ease-in-out;
+	}
+	b {
+		display:block;
+		font-size:1.5em;
+		line-height:1em;
+		animation: 7s pulse linear infinite;
+	}
+	.main {
+		width:100%;
+	}
+	.button {
+		width:7em;
+		height:7em;
+		font-size:1em;
+		border-radius:50%;
+		background-color: white;
+		box-shadow: 0.1em 0.1em 4em orange;
+		font-family: Courier, monospace;
+		color:orange;
+		display:flex;
+		align-items:center;
+		justify-content:center;
+		text-align: center;
+		border:0.05em solid orange;
+		transition:0.25s ease-in-out;
+		animation:5s stretches ease-in-out infinite;
+		cursor:pointer;
+	}
+	.button:hover {
+		border:0.05em solid white;
+
+	}
+	@keyframes stretches {
+		0% {
+			transform:scale(1);
+		}
+		15%{
+			transform:scaleY(1.1);
+		}
+		30%{
+			transform:scale(1);
+		}
+		45%{
+			transform:scaleX(1.2);
+		}
+		60%{
+			transform:scale(1);
+		}
+		80%{
+			transform:scale(1.1);
+		}
+		100%{
+			transform:scale(1);
+		}
+	}
+	@keyframes pulse {
+		0% {
+			color: white;
+		}
+		25% {
+			color: yellow;
+		}
+		50% {
+			color: orange;
+		}
+		75% {
+			color: yellow;
+		}
+		100% {
+			color: white;
+		}
+
+	}
+	@media screen and (max-width:767px){
+		.aligner {
+			width:80%;
+			height:80vh;
+		}
+	}
+</style>
+</head>
+<body>
+
+	<div class='main'>
+	<div class='button'>Listen to Macedonio</div>
+	</div>
+
+
+	<div id="alert">
+		<div class='aligner'>
+			<p><b>With a casual gentleness more 
+				<br>convincing than any vehemence, 
+				<br>Macedonio Fernandez&apos;s voice 
+				<br>reiterated that the soul is 
+				<br>immortal. He assured me that the 
+				<br>death of the body is of no 
+				<br>significance and that dying must 
+				<br>be the most meaningless incident 
+				<br>that can befall a man.</b></p>
+			<br>
+			<a href="page3.html"><p>click here to LOOK DOWN</p></a>
+		</div>
+	</div>
+
+</body>
+<script type="text/javascript">
+
+button = document.querySelector('.button')
+alert = document.querySelector('#alert')
+
+button.onclick=function() {
+	alert.style.opacity='1'
+	alert.style.bottom='0'
+}
+
+alert.onclick=function() {
+	alert.style.opacity='0'
+	alert.style.bottom='-100vh'
+}
+</script>
+</html>
