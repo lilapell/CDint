@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lily a pell - blog</title>
+	<style type="text/css">
+		html, body {
+			font-family: 'Noto Sans JP', sans-serif;
+		}
+		.container2 {
+  			width: 100%;
+  			margin: 1px; 
+  			justify-content: space-around;
+		}
+
+		.gallery2 {
+  			display: grid;
+  			grid-template-columns: repeat(2, 1fr);
+  			grid-template-rows: repeat(2, 25vw);
+  			grid-column-gap: 0;
+  			grid-row-gap: 0;
+		}
+
+		.gallery2_img {
+  			object-fit: contain;
+  			float: left;
+  			display: inline-flex; 
+		}
+
+		.gallery2_item1 {
+  			grid-column-start: 1;
+  			grid-column-end: 2;
+  			grid-row-start: 1;
+  			grid-row-end: 2;
+		}
+
+		.gallery2_item2 {
+  			grid-column-start: 2;
+  			grid-column-end: 3;
+  			grid-row-start: 1;
+  			grid-row-end: 2;
+		}
+
+		.gallery2_item3 {
+  			grid-column-start: 1;
+  			grid-column-end: 2;
+  			grid-row-start: 2;
+  			grid-row-end: 3;
+		}
+
+		.gallery2_item4 {
+  			grid-column-start: 2;
+  			grid-column-end: 3;
+  			grid-row-start: 2;
+		}
+	</style>
+</head>
+<body>
+	<div class="container2">
+		<div class="gallery2"> 
+			<p class="gallery2_item1">text goes here please</p>
+			<figure class="gallery2_item2">
+				<img src="glasses1.png" class="gallery2_img" alt="GREY_FOX_RIMLESS">
+			</figure>
+				<img src="glasses1.png" class="gallery2_img" alt="GREY_FOX_RIMLESS"><figcaption">Oct. 7 2020</figcaption">
+			</figure>
+			<p class="gallery2_item3">text goes here please</p>
+			<figure class="gallery2_item4">
+				<img src="glasses2.png" class="gallery2_img" alt="DEEP_BRASS_HALF_RIM">
+			</figure>
+			<figure class="gallery2_item4">
+				<img src="glasses2.png" class="gallery2_img" alt="DEEP_BRASS_HALF_RIM">
+				<figcaption">Oct. 3 2020</figcaption">
+			</figure>
+		</div>
+	</div>
+
+</body>
+</html>
